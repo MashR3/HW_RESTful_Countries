@@ -1,0 +1,9 @@
+<h1>Country Details</h1>
+
+<h2><%= @country.name %></h2>
+<p>Reigning President: <%= @country.name_of_president %></p>
+<p>Population: <strong><%= @country.population %></strong></p>
+<p>Primary Language: <%= @country.first_language %></p>
+<%= image_tag @country.flag_url %>
+
+<a href="/countries">Index Page</a>

@@ -1,0 +1,18 @@
+<h1>List of Countries</h1>
+
+<h3><a href="/countries/new">Add a Newly Discovered Country</a></h3>
+
+<% @countries.each do |country| %>
+	
+	<a href="countries/<%= country.id %>"<h2><%= country.name %></h2></a>
+	<p>Reigning President: <%= country.name_of_president %></p>
+	<p>Population:  - <strong><%= country.population %></strong></p>
+
+
+	<form action="/countries/<%= country.id %>" method="POST">
+		<%= token_tag %>
+			<input class="button" type="hidden" name="_method" value="DELETE">
+			<input class="button" type="submit" value="DELETE">
+	</form>
+
+<% end %>

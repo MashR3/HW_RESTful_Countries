@@ -1,0 +1,21 @@
+<h1>New Country</h1>
+
+
+<form accept-charset="UTF-8" action="/countries" method="POST">
+  Country Name: <input name="name" type="text" value=" " />
+
+  <br>
+  Primary Language: <input name="first_language" type="text" value=" " />
+
+  <br>
+  Population: <input name="population" type="text" value=" " />
+
+  <br>
+  Current President: <input name="name_of_president" type="text" value=" " />
+
+  <br>
+  Link to flag: <input name="flag_url" type="text" value=" " />
+
+  <input type="submit" value="save">
+  <%= token_tag %>
+</form>

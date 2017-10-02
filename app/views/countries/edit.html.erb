@@ -1,0 +1,28 @@
+<h1>Edit Country</h1>
+
+<form action="/countries/<%= @countries.id %>" method="POST">
+    <%= token_tag %>
+
+    <label for="name">Name: </label>
+    <input type="text" name="name" value="<%= @countries.name %>">
+
+    <br>    
+    <label for="first_language">Primary Language: </label>
+    <textarea name="first_language"><%= @countries.first_language %></textarea>
+
+    <br>
+    <label for="population">Population: </label>
+    <textarea name="population"><%= @countries.population %></textarea>
+
+    <br>
+    <label for="name_of_president">President: </label>
+    <textarea name="name_of_president"><%= @countries.name_of_president %></textarea>
+
+    <br>
+    <label for="flag_url">Flag URL: </label>
+    <textarea name="flag_url"><%= @countries.flag_url %></textarea>
+
+    <input type="hidden" name="_method" value="PUT">
+
+    <input type="submit" value="Update">
+</form>
