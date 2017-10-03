@@ -8,7 +8,6 @@
 	<p>Reigning President: <%= country.name_of_president %></p>
 	<p>Population:  - <strong><%= country.population %></strong></p>
 
-	<!-- <p><a href="countries/<%=country.id %>/edit"<h2> Update Country </h2></a></p> -->
 
 	<form action="/countries/<%= country.id %>" method="POST">
 		<%= token_tag %>
